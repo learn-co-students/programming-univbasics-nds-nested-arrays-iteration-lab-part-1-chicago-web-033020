@@ -1,6 +1,15 @@
-def find_even_values(src)
-  # Given an Array of Arrays of Integers ( [ [10, 11], [99, 50, 3, 4], [23, 41] ] ):
-  #
-  # Output all even values in each nested array
-
+# Given an Array of Arrays of Integers ( [ [10, 11], [99, 50, 3, 4], [23, 41] ] ):
+# Output all even values in each nested array
+def find_even_values(aoa)
+  row_index = 0
+  while row_index < aoa.count do
+    element_index = 0
+    while element_index < aoa[row_index].count do
+      if aoa[row_index][element_index].even?
+        p aoa[row_index][element_index]
+      end
+      element_index += 1
+    end
+    row_index += 1
+  end
 end
